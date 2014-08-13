@@ -27,7 +27,6 @@
 		1A6416A318FADF2E00A769B2 /* log_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164A18FADF2E00A769B2 /* log_util.c */; };
 		1A6416A418FADF2E00A769B2 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164B18FADF2E00A769B2 /* log.c */; };
 		1A6416A518FADF2E00A769B2 /* lsif.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164C18FADF2E00A769B2 /* lsif.c */; };
-		1A6416A618FADF2E00A769B2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164D18FADF2E00A769B2 /* main.c */; };
 		1A6416A718FADF2E00A769B2 /* mdp_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164E18FADF2E00A769B2 /* mdp_client.c */; };
 		1A6416A818FADF2E00A769B2 /* mdp_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64164F18FADF2E00A769B2 /* mdp_filter.c */; };
 		1A6416A918FADF2E00A769B2 /* mdp_net.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165018FADF2E00A769B2 /* mdp_net.c */; };
@@ -164,6 +163,11 @@
 		1A64185618FB1CC400A769B2 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A218FADF6800A769B2 /* sc_muladd.c */; };
 		1A64185718FB1CC400A769B2 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A318FADF6800A769B2 /* sc_reduce.c */; };
 		1A64185818FB1CC400A769B2 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A418FADF6800A769B2 /* sign.c */; };
+		F6CBF687199B092C0038905F /* whence.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF685199B092C0038905F /* whence.c */; };
+		F6CBF68A199B09320038905F /* console.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF688199B09320038905F /* console.c */; };
+		F6CBF68D199B09560038905F /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF68B199B09560038905F /* limit.c */; };
+		F6CBF68F199B097E0038905F /* logMessage.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF68E199B097E0038905F /* logMessage.c */; };
+		F6CBF691199B0E620038905F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF690199B0E620038905F /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -239,7 +243,6 @@
 		1A64164A18FADF2E00A769B2 /* log_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = log_util.c; path = ../../log_util.c; sourceTree = "<group>"; };
 		1A64164B18FADF2E00A769B2 /* log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = log.c; path = ../../log.c; sourceTree = "<group>"; };
 		1A64164C18FADF2E00A769B2 /* lsif.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lsif.c; path = ../../lsif.c; sourceTree = "<group>"; };
-		1A64164D18FADF2E00A769B2 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../../main.c; sourceTree = "<group>"; };
 		1A64164E18FADF2E00A769B2 /* mdp_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mdp_client.c; path = ../../mdp_client.c; sourceTree = "<group>"; };
 		1A64164F18FADF2E00A769B2 /* mdp_filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mdp_filter.c; path = ../../mdp_filter.c; sourceTree = "<group>"; };
 		1A64165018FADF2E00A769B2 /* mdp_net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mdp_net.c; path = ../../mdp_net.c; sourceTree = "<group>"; };
@@ -508,6 +511,14 @@
 		1A64182418FB17C900A769B2 /* init_rs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = init_rs.h; sourceTree = "<group>"; };
 		1A64182518FB17C900A769B2 /* init_rs_char.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_rs_char.c; sourceTree = "<group>"; };
 		1A64182818FB17C900A769B2 /* rs-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rs-common.h"; sourceTree = "<group>"; };
+		F6CBF685199B092C0038905F /* whence.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = whence.c; path = ../../whence.c; sourceTree = "<group>"; };
+		F6CBF686199B092C0038905F /* whence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whence.h; sourceTree = "<group>"; };
+		F6CBF688199B09320038905F /* console.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = console.c; path = ../../console.c; sourceTree = "<group>"; };
+		F6CBF689199B09320038905F /* console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = console.h; sourceTree = "<group>"; };
+		F6CBF68B199B09560038905F /* limit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = limit.c; path = ../../limit.c; sourceTree = "<group>"; };
+		F6CBF68C199B09560038905F /* limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = limit.h; sourceTree = "<group>"; };
+		F6CBF68E199B097E0038905F /* logMessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = logMessage.c; path = ../../logMessage.c; sourceTree = "<group>"; };
+		F6CBF690199B0E620038905F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../../main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,6 +535,9 @@
 		1A13A3B018F0C01500A6233B /* headers */ = {
 			isa = PBXGroup;
 			children = (
+				F6CBF68C199B09560038905F /* limit.h */,
+				F6CBF689199B09320038905F /* console.h */,
+				F6CBF686199B092C0038905F /* whence.h */,
 				1A13A3DA18F0CD9B00A6233B /* cli.h */,
 				1A13A3DB18F0CD9B00A6233B /* conf_schema.h */,
 				1A13A3DC18F0CD9B00A6233B /* conf.h */,
@@ -1013,6 +1027,10 @@
 		1A64181718FB156E00A769B2 /* serval */ = {
 			isa = PBXGroup;
 			children = (
+				F6CBF68E199B097E0038905F /* logMessage.c */,
+				F6CBF68B199B09560038905F /* limit.c */,
+				F6CBF688199B09320038905F /* console.c */,
+				F6CBF685199B092C0038905F /* whence.c */,
 				1A64181918FB15D900A769B2 /* daemon */,
 				1A64181818FB15CE00A769B2 /* client */,
 				1A64168818FADF2E00A769B2 /* version_servald.c */,
@@ -1051,6 +1069,7 @@
 		1A64181918FB15D900A769B2 /* daemon */ = {
 			isa = PBXGroup;
 			children = (
+				F6CBF690199B0E620038905F /* main.c */,
 				1A64163418FADF2E00A769B2 /* cli.c */,
 				1A64163518FADF2E00A769B2 /* commandline.c */,
 				1A64163C18FADF2E00A769B2 /* crypto.c */,
@@ -1063,7 +1082,6 @@
 				1A64164618FADF2E00A769B2 /* httpd.c */,
 				1A64164918FADF2E00A769B2 /* keyring.c */,
 				1A64164C18FADF2E00A769B2 /* lsif.c */,
-				1A64164D18FADF2E00A769B2 /* main.c */,
 				1A64166918FADF2E00A769B2 /* radio_link.c */,
 				1A64165218FADF2E00A769B2 /* meshms_restful.c */,
 				1A64165318FADF2E00A769B2 /* meshms.c */,
@@ -1204,11 +1222,13 @@
 				1A6416B618FADF2E00A769B2 /* overlay_buffer.c in Sources */,
 				1A6416E918FADF4A00A769B2 /* encode.c in Sources */,
 				1A64183918FB1CC400A769B2 /* fe_mul.c in Sources */,
+				F6CBF68A199B09320038905F /* console.c in Sources */,
 				1A6416D818FADF2E00A769B2 /* srandomdev.c in Sources */,
 				1A64182918FB17EC00A769B2 /* ccsds_tables.c in Sources */,
 				1A64168F18FADF2E00A769B2 /* conf_om.c in Sources */,
 				1A6416AF18FADF2E00A769B2 /* monitor.c in Sources */,
 				1A6417D218FADF6800A769B2 /* keypair.c in Sources */,
+				F6CBF691199B0E620038905F /* main.c in Sources */,
 				1A64169718FADF2E00A769B2 /* directory_client.c in Sources */,
 				1A64183E18FB1CC400A769B2 /* fe_sub.c in Sources */,
 				1A6416A318FADF2E00A769B2 /* log_util.c in Sources */,
@@ -1268,6 +1288,7 @@
 				1A6416C918FADF2E00A769B2 /* rhizome_fetch.c in Sources */,
 				1A6417CD18FADF6800A769B2 /* hmac.c in Sources */,
 				1A6416E418FADF2E00A769B2 /* xprintf.c in Sources */,
+				F6CBF687199B092C0038905F /* whence.c in Sources */,
 				1A64181218FADF6800A769B2 /* xor.c in Sources */,
 				1A64185318FB1CC400A769B2 /* keypair.c in Sources */,
 				1A6416BB18FADF2E00A769B2 /* overlay_olsr.c in Sources */,
@@ -1298,10 +1319,11 @@
 				1A6416D118FADF2E00A769B2 /* route_link.c in Sources */,
 				1A64183118FB1C7600A769B2 /* fe_1.c in Sources */,
 				1A64169218FADF2E00A769B2 /* conf.c in Sources */,
-				1A6416A618FADF2E00A769B2 /* main.c in Sources */,
 				1A64183C18FB1CC400A769B2 /* fe_sq.c in Sources */,
+				F6CBF68D199B09560038905F /* limit.c in Sources */,
 				1A64184918FB1CC400A769B2 /* ge_p2_dbl.c in Sources */,
 				1A64169618FADF2E00A769B2 /* dataformats.c in Sources */,
+				F6CBF68F199B097E0038905F /* logMessage.c in Sources */,
 				1A64169118FADF2E00A769B2 /* conf_schema.c in Sources */,
 				1A64183D18FB1CC400A769B2 /* fe_sq2.c in Sources */,
 				1A6416D418FADF2E00A769B2 /* server.c in Sources */,
