@@ -511,6 +511,8 @@
 		1A64182418FB17C900A769B2 /* init_rs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = init_rs.h; sourceTree = "<group>"; };
 		1A64182518FB17C900A769B2 /* init_rs_char.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_rs_char.c; sourceTree = "<group>"; };
 		1A64182818FB17C900A769B2 /* rs-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rs-common.h"; sourceTree = "<group>"; };
+		F669924119A37576009C38DD /* serval-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "serval-Prefix.pch"; sourceTree = "<group>"; };
+		F669924219A375F7009C38DD /* rhizome_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rhizome_types.h; sourceTree = "<group>"; };
 		F6CBF685199B092C0038905F /* whence.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = whence.c; path = ../../whence.c; sourceTree = "<group>"; };
 		F6CBF686199B092C0038905F /* whence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whence.h; sourceTree = "<group>"; };
 		F6CBF688199B09320038905F /* console.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = console.c; path = ../../console.c; sourceTree = "<group>"; };
@@ -519,6 +521,31 @@
 		F6CBF68C199B09560038905F /* limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = limit.h; sourceTree = "<group>"; };
 		F6CBF68E199B097E0038905F /* logMessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = logMessage.c; path = ../../logMessage.c; sourceTree = "<group>"; };
 		F6CBF690199B0E620038905F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../../main.c; sourceTree = "<group>"; };
+		F6F45577199DC70D008C42BD /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		F6F45578199DC70D008C42BD /* crypto_auth_hmacsha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha256.h; sourceTree = "<group>"; };
+		F6F45579199DC70D008C42BD /* crypto_auth_hmacsha512256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha512256.h; sourceTree = "<group>"; };
+		F6F4557A199DC70D008C42BD /* crypto_box_curve25519xsalsa20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_box_curve25519xsalsa20poly1305.h; sourceTree = "<group>"; };
+		F6F4557B199DC70D008C42BD /* crypto_core_hsalsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_hsalsa20.h; sourceTree = "<group>"; };
+		F6F4557C199DC70D008C42BD /* crypto_core_salsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa20.h; sourceTree = "<group>"; };
+		F6F4557D199DC70D008C42BD /* crypto_core_salsa2012.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa2012.h; sourceTree = "<group>"; };
+		F6F4557E199DC70D008C42BD /* crypto_core_salsa208.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa208.h; sourceTree = "<group>"; };
+		F6F4557F199DC70D008C42BD /* crypto_hash_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha256.h; sourceTree = "<group>"; };
+		F6F45580199DC70D008C42BD /* crypto_hash_sha512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha512.h; sourceTree = "<group>"; };
+		F6F45581199DC70D008C42BD /* crypto_hashblocks_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hashblocks_sha256.h; sourceTree = "<group>"; };
+		F6F45582199DC70D008C42BD /* crypto_hashblocks_sha512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hashblocks_sha512.h; sourceTree = "<group>"; };
+		F6F45583199DC70D008C42BD /* crypto_onetimeauth_poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth_poly1305.h; sourceTree = "<group>"; };
+		F6F45584199DC70D008C42BD /* crypto_scalarmult_curve25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scalarmult_curve25519.h; sourceTree = "<group>"; };
+		F6F45585199DC70D008C42BD /* crypto_secretbox_xsalsa20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox_xsalsa20poly1305.h; sourceTree = "<group>"; };
+		F6F45586199DC70D008C42BD /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
+		F6F45587199DC70D008C42BD /* crypto_stream_salsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa20.h; sourceTree = "<group>"; };
+		F6F45588199DC70D008C42BD /* crypto_stream_salsa2012.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa2012.h; sourceTree = "<group>"; };
+		F6F45589199DC70D008C42BD /* crypto_stream_salsa208.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa208.h; sourceTree = "<group>"; };
+		F6F4558A199DC70D008C42BD /* crypto_stream_xsalsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_xsalsa20.h; sourceTree = "<group>"; };
+		F6F4558B199DC70D008C42BD /* crypto_uint32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_uint32.h; sourceTree = "<group>"; };
+		F6F4558C199DC70D008C42BD /* crypto_verify_16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_verify_16.h; sourceTree = "<group>"; };
+		F6F4558D199DC70D008C42BD /* crypto_verify_32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_verify_32.h; sourceTree = "<group>"; };
+		F6F4558E199DC70D008C42BD /* nacl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nacl.h; path = nacl/include/nacl.h; sourceTree = "<group>"; };
+		F6F4558F199DC70D008C42BD /* randombytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randombytes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +562,8 @@
 		1A13A3B018F0C01500A6233B /* headers */ = {
 			isa = PBXGroup;
 			children = (
+				F6F4558E199DC70D008C42BD /* nacl.h */,
+				F669924219A375F7009C38DD /* rhizome_types.h */,
 				F6CBF68C199B09560038905F /* limit.h */,
 				F6CBF689199B09320038905F /* console.h */,
 				F6CBF686199B092C0038905F /* whence.h */,
@@ -583,6 +612,8 @@
 		1A5334B318F087B500C7BD93 = {
 			isa = PBXGroup;
 			children = (
+				F669924019A37576009C38DD /* serval */,
+				F6F45576199DC70D008C42BD /* include */,
 				1A64161018FADE6500A769B2 /* serval */,
 				1A64158E18FADC5B00A769B2 /* Products */,
 			);
@@ -1150,6 +1181,46 @@
 			path = "../../fec-3.0.1";
 			sourceTree = "<group>";
 		};
+		F669924019A37576009C38DD /* serval */ = {
+			isa = PBXGroup;
+			children = (
+				F669924119A37576009C38DD /* serval-Prefix.pch */,
+			);
+			path = serval;
+			sourceTree = "<group>";
+		};
+		F6F45576199DC70D008C42BD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F6F45577199DC70D008C42BD /* api.h */,
+				F6F45578199DC70D008C42BD /* crypto_auth_hmacsha256.h */,
+				F6F45579199DC70D008C42BD /* crypto_auth_hmacsha512256.h */,
+				F6F4557A199DC70D008C42BD /* crypto_box_curve25519xsalsa20poly1305.h */,
+				F6F4557B199DC70D008C42BD /* crypto_core_hsalsa20.h */,
+				F6F4557C199DC70D008C42BD /* crypto_core_salsa20.h */,
+				F6F4557D199DC70D008C42BD /* crypto_core_salsa2012.h */,
+				F6F4557E199DC70D008C42BD /* crypto_core_salsa208.h */,
+				F6F4557F199DC70D008C42BD /* crypto_hash_sha256.h */,
+				F6F45580199DC70D008C42BD /* crypto_hash_sha512.h */,
+				F6F45581199DC70D008C42BD /* crypto_hashblocks_sha256.h */,
+				F6F45582199DC70D008C42BD /* crypto_hashblocks_sha512.h */,
+				F6F45583199DC70D008C42BD /* crypto_onetimeauth_poly1305.h */,
+				F6F45584199DC70D008C42BD /* crypto_scalarmult_curve25519.h */,
+				F6F45585199DC70D008C42BD /* crypto_secretbox_xsalsa20poly1305.h */,
+				F6F45586199DC70D008C42BD /* crypto_sign_edwards25519sha512batch.h */,
+				F6F45587199DC70D008C42BD /* crypto_stream_salsa20.h */,
+				F6F45588199DC70D008C42BD /* crypto_stream_salsa2012.h */,
+				F6F45589199DC70D008C42BD /* crypto_stream_salsa208.h */,
+				F6F4558A199DC70D008C42BD /* crypto_stream_xsalsa20.h */,
+				F6F4558B199DC70D008C42BD /* crypto_uint32.h */,
+				F6F4558C199DC70D008C42BD /* crypto_verify_16.h */,
+				F6F4558D199DC70D008C42BD /* crypto_verify_32.h */,
+				F6F4558F199DC70D008C42BD /* randombytes.h */,
+			);
+			name = include;
+			path = ../nacl/include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1386,7 +1457,7 @@
 		1A64162C18FADE6500A769B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1425,19 +1496,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../nacl/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../nacl/include\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../\"";
 			};
 			name = Debug;
 		};
 		1A64162D18FADE6500A769B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1474,12 +1549,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../nacl/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../nacl/include\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../\"";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
