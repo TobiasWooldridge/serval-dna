@@ -78,6 +78,21 @@ static int restful_mesh_routablepeers_json_content(struct http_request *hr, unsi
   return generate_http_content_from_strbuf_chunks(hr, (char *)buf, bufsz, result, restful_mesh_routablepeers_json_content_chunk);
 }
 
+static int append_sid(struct subscriber *subscriber, void *context)
+{
+  if (subscriber == my_subscriber)
+    return 0;
+
+  if (!context)
+    return 0;
+    
+  int *entries = (int*)context;
+
+  (*entries)++;
+
+  return 0;
+}
+
 static int restful_mesh_routablepeers_json_content_chunk(struct http_request *hr, strbuf b)
 {
   httpd_request *r = (httpd_request *) hr;
@@ -92,55 +107,58 @@ static int restful_mesh_routablepeers_json_content_chunk(struct http_request *hr
       strbuf_puts(b, "{\n\"header\":[");
       unsigned i;
       for (i = 0; i != NELS(headers); ++i) {
-  if (i)
-    strbuf_putc(b, ',');
-  strbuf_json_string(b, headers[i]);
+        if (i)
+          strbuf_putc(b, ',');
+        strbuf_json_string(b, headers[i]);
       }
       strbuf_puts(b, "],\n\"rows\":[");
       if (!strbuf_overrun(b))
-  r->u.sidlist.phase = LIST_ROWS;
+        r->u.sidlist.phase = LIST_ROWS;
       return 1;
     case LIST_ROWS:
-  if (r->u.sidlist.cn != 0 || r->u.sidlist.in != 0)
-    strbuf_putc(b, ',');
+      if (r->u.sidlist.in != 0)
+        strbuf_putc(b, ',');
 
-  // if (mesh->context_count == 0 || mesh->contexts[r->u.sidlist.cn]->identity_count == 0) {
-  //   r->u.sidlist.phase = LIST_END;
-  //   return 1;
-  // }
+      int foo = 0;
+      enum_subscribers(NULL, append_sid, &foo);
 
-  // const sid_t *sidp = NULL;
-  // const char *did = NULL;
-  // const char *name = NULL;
-  // mesh_identity_extract(mesh->contexts[r->u.sidlist.cn]->identities[r->u.sidlist.in], &sidp, &did, &name);
-  // if (sidp || did) {
-  //   strbuf_puts(b, "\n[");
-  //   strbuf_json_string(b, alloca_tohex_sid_t(*sidp));
-  //   strbuf_puts(b, ",");
-  //   strbuf_json_string(b, did);
-  //   strbuf_puts(b, ",");
-  //   strbuf_json_string(b, name);
-  //   strbuf_puts(b, "]");
-  // }
+      printf("Moo: %d\n", foo);
 
-  // if (!strbuf_overrun(b)) {
-  //   ++r->u.sidlist.in;
-  //   if (r->u.sidlist.in >= mesh->contexts[r->u.sidlist.cn]->identity_count) {
-  //     r->u.sidlist.in = 0;
+      // if (mesh->contexts[r->u.sidlist.cn]->identity_count == 0) {
+      //   r->u.sidlist.phase =bbbbbbb LIST_END;
+      //   return 1;
+      // }
 
-  //     ++r->u.sidlist.cn;
-  //     if (r->u.sidlist.cn >= mesh->context_count) {
-  //       r->u.sidlist.phase = LIST_END;
-  //     }
-  //   }
-  // }
-  return 1;
+      // const sid_t *sidp = NULL;
+      // const char *did = NULL;
+      // const char *name = NULL;
+      // mesh_identity_extract(mesh->contexts[r->u.sidlist.cn]->identities[r->u.sidlist.in], &sidp, &did, &name);
+      // if (sidp || did) {
+      //   strbuf_puts(b, "\n[");
+      //   strbuf_json_string(b, alloca_tohex_sid_t(*sidp));
+      //   strbuf_puts(b, ",");
+      //   strbuf_json_string(b, did);
+      //   strbuf_puts(b, ",");
+      //   strbuf_json_string(b, name);
+      //   strbuf_puts(b, "]");
+      // }
+
+      // if (!strbuf_overrun(b)) {
+      //   ++r->u.sidlist.in;
+      //   if (r->u.sidlist.in >= mesh->contexts[r->u.sidlist.cn]->identity_count) {
+      //     r->u.sidlist.in = 0;
+
+      //     ++r->u.sidlist.cn;
+      //     if (r->u.sidlist.cn >= mesh->context_count) {
+      //       r->u.sidlist.phase = LIST_END;
+      //     }
+      //   }
       // }
       // fall through...
     case LIST_END:
       strbuf_puts(b, "\n]\n}\n");
       if (!strbuf_overrun(b))
-  r->u.sidlist.phase = LIST_DONE;
+        r->u.sidlist.phase = LIST_DONE;
       // fall through...
     case LIST_DONE:
       return 0;
