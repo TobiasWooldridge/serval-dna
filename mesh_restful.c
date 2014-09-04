@@ -25,6 +25,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 static HTTP_HANDLER restful_mesh_routablepeers_json;
 
+struct mesh_peers_response {
+  strbuf b;
+  httpd_request *r;
+};
+
 int restful_mesh_(httpd_request *r, const char *remainder)
 {
   r->http.response.header.content_type = CONTENT_TYPE_JSON;
@@ -86,9 +91,18 @@ static int append_sid(struct subscriber *subscriber, void *context)
   if (!context)
     return 0;
     
-  int *entries = (int*)context;
+  struct mesh_peers_response *response = (struct mesh_peers_response*)context;
 
-  (*entries)++;
+  if (response->r->u.sidlist.in != 0)
+    strbuf_putc(response->b, ',');
+
+  const sid_t sidp = subscriber->sid;
+
+  strbuf_puts(response->b, "\n[");
+  strbuf_json_string(response->b, alloca_tohex_sid_t(sidp));
+  strbuf_puts(response->b, "]");
+
+  response->r->u.sidlist.in++;
 
   return 0;
 }
@@ -102,6 +116,11 @@ static int restful_mesh_routablepeers_json_content_chunk(struct http_request *hr
   const char *headers[] = {
     "sid"
   };
+
+  struct mesh_peers_response foo;
+  foo.r = r;
+  foo.b = b;
+
   switch (r->u.sidlist.phase) {
     case LIST_HEADER:
       strbuf_puts(b, "{\n\"header\":[");
@@ -116,44 +135,7 @@ static int restful_mesh_routablepeers_json_content_chunk(struct http_request *hr
         r->u.sidlist.phase = LIST_ROWS;
       return 1;
     case LIST_ROWS:
-      if (r->u.sidlist.in != 0)
-        strbuf_putc(b, ',');
-
-      int foo = 0;
       enum_subscribers(NULL, append_sid, &foo);
-
-      printf("Moo: %d\n", foo);
-
-      // if (mesh->contexts[r->u.sidlist.cn]->identity_count == 0) {
-      //   r->u.sidlist.phase =bbbbbbb LIST_END;
-      //   return 1;
-      // }
-
-      // const sid_t *sidp = NULL;
-      // const char *did = NULL;
-      // const char *name = NULL;
-      // mesh_identity_extract(mesh->contexts[r->u.sidlist.cn]->identities[r->u.sidlist.in], &sidp, &did, &name);
-      // if (sidp || did) {
-      //   strbuf_puts(b, "\n[");
-      //   strbuf_json_string(b, alloca_tohex_sid_t(*sidp));
-      //   strbuf_puts(b, ",");
-      //   strbuf_json_string(b, did);
-      //   strbuf_puts(b, ",");
-      //   strbuf_json_string(b, name);
-      //   strbuf_puts(b, "]");
-      // }
-
-      // if (!strbuf_overrun(b)) {
-      //   ++r->u.sidlist.in;
-      //   if (r->u.sidlist.in >= mesh->contexts[r->u.sidlist.cn]->identity_count) {
-      //     r->u.sidlist.in = 0;
-
-      //     ++r->u.sidlist.cn;
-      //     if (r->u.sidlist.cn >= mesh->context_count) {
-      //       r->u.sidlist.phase = LIST_END;
-      //     }
-      //   }
-      // }
       // fall through...
     case LIST_END:
       strbuf_puts(b, "\n]\n}\n");
