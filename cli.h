@@ -23,11 +23,17 @@
 #include <stdint.h>
 #ifdef HAVE_JNI_H
 #include <jni.h>
+
+// Stop OpenJDK 7 from foisting their UNUSED() macro on us in <jni_md.h>
+#ifdef UNUSED
+# undef UNUSED
+#endif
+
 #endif
 #include "xprintf.h"
 #include "log.h"
 
-#define COMMAND_LINE_MAX_LABELS   (32)
+#define COMMAND_LINE_MAX_LABELS   (16)
 
 struct cli_parsed;
 struct cli_context{
@@ -52,6 +58,7 @@ struct cli_schema {
 
 struct cli_parsed {
   const struct cli_schema *commands;
+  const struct cli_schema *end_commands;
   unsigned int cmdi;
   struct labelv {
     const char *label;
@@ -68,10 +75,10 @@ void _debug_cli_parsed(struct __sourceloc __whence, const struct cli_parsed *par
 
 #define DEBUG_cli_parsed(parsed) _debug_cli_parsed(__WHENCE__, parsed)
 
-int cli_usage(const struct cli_schema *commands, XPRINTF xpf);
-int cli_usage_args(const int argc, const char *const *args, const struct cli_schema *commands, XPRINTF xpf);
+int cli_usage(const struct cli_schema *commands, const struct cli_schema *end_commands, XPRINTF xpf);
+int cli_usage_args(const int argc, const char *const *args, const struct cli_schema *commands, const struct cli_schema *end_commands, XPRINTF xpf);
 int cli_usage_parsed(const struct cli_parsed *parsed, XPRINTF xpf);
-int cli_parse(const int argc, const char *const *args, const struct cli_schema *commands, struct cli_parsed *parsed);
+int cli_parse(const int argc, const char *const *args, const struct cli_schema *commands, const struct cli_schema *end_commands, struct cli_parsed *parsed);
 int cli_invoke(const struct cli_parsed *parsed, struct cli_context *context);
 int _cli_arg(struct __sourceloc __whence, const struct cli_parsed *parsed, char *label, const char **dst, int (*validator)(const char *arg), char *defaultvalue);
 
@@ -88,16 +95,5 @@ int cli_optional_bundle_crypt_key(const char *arg);
 int cli_interval_ms(const char *arg);
 int cli_uint(const char *arg);
 int cli_optional_did(const char *text);
-
-int cli_putchar(struct cli_context *context, char c);
-int cli_puts(struct cli_context *context, const char *str);
-void cli_printf(struct cli_context *context, const char *fmt, ...) __attribute__ (( format(printf,2,3) ));
-int cli_delim(struct cli_context *context, const char *opt);
-void cli_columns(struct cli_context *context, int columns, const char *names[]);
-void cli_row_count(struct cli_context *context, int rows);
-void cli_field_name(struct cli_context *context, const char *name, const char *delim);
-void cli_put_long(struct cli_context *context, int64_t value, const char *delim);
-void cli_put_string(struct cli_context *context, const char *value, const char *delim);
-void cli_put_hexvalue(struct cli_context *context, const unsigned char *value, int length, const char *delim);
 
 #endif // __SERVAL_DNA__CLI_H

@@ -173,15 +173,6 @@ struct overlay_buffer;
 struct overlay_frame;
 struct broadcast;
 
-extern int serverMode;
-
-int server_pid();
-const char *_server_pidfile_path(struct __sourceloc);
-#define server_pidfile_path() (_server_pidfile_path(__WHENCE__))
-void server_save_argv(int argc, const char *const *argv);
-int server(void);
-int server_write_proc_state(const char *path, const char *fmt, ...);
-int server_get_proc_state(const char *path, char *buff, size_t buff_len);
 void overlay_mdp_clean_socket_files();
 
 int overlay_forward_payload(struct overlay_frame *f);
@@ -260,16 +251,6 @@ void monitor_get_all_supported_codecs(unsigned char *codecs);
 int directory_registration();
 int directory_service_init();
 
-int app_nonce_test(const struct cli_parsed *parsed, struct cli_context *context);
-int app_rhizome_direct_sync(const struct cli_parsed *parsed, struct cli_context *context);
-int app_monitor_cli(const struct cli_parsed *parsed, struct cli_context *context);
-int app_vomp_console(const struct cli_parsed *parsed, struct cli_context *context);
-int app_meshms_conversations(const struct cli_parsed *parsed, struct cli_context *context);
-int app_meshms_send_message(const struct cli_parsed *parsed, struct cli_context *context);
-int app_meshms_list_messages(const struct cli_parsed *parsed, struct cli_context *context);
-int app_meshms_mark_read(const struct cli_parsed *parsed, struct cli_context *context);
-int app_msp_connection(const struct cli_parsed *parsed, struct cli_context *context);
-
 int monitor_get_fds(struct pollfd *fds,int *fdcount,int fdmax);
 
 int monitor_setup_sockets();
@@ -335,7 +316,5 @@ void link_neighbour_status_html(struct strbuf *b, struct subscriber *neighbour);
 int link_stop_routing(struct subscriber *subscriber);
 int link_has_neighbours();
 int link_interface_has_neighbours(struct overlay_interface *interface);
-
-int generate_nonce(unsigned char *nonce,int bytes);
 
 #endif // __SERVAL_DNA__SERVAL_H

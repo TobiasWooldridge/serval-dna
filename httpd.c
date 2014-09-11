@@ -25,6 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "overlay_interface.h"
 #include "mem.h"
 #include "net.h"
+#include "server.h"
 
 #define RHIZOME_SERVER_MAX_LIVE_REQUESTS 32
 
@@ -37,7 +38,9 @@ HTTP_HANDLER restful_rhizome_bundlelist_json;
 HTTP_HANDLER restful_rhizome_newsince;
 HTTP_HANDLER restful_rhizome_insert;
 HTTP_HANDLER restful_rhizome_;
+HTTP_HANDLER restful_mesh_;
 HTTP_HANDLER restful_meshms_;
+HTTP_HANDLER restful_keyring_;
 
 HTTP_HANDLER rhizome_status_page;
 HTTP_HANDLER rhizome_file_page;
@@ -57,7 +60,9 @@ struct http_handler paths[]={
   {"/restful/rhizome/newsince/", restful_rhizome_newsince},
   {"/restful/rhizome/insert", restful_rhizome_insert},
   {"/restful/rhizome/", restful_rhizome_},
+  {"/restful/mesh/", restful_mesh_},
   {"/restful/meshms/", restful_meshms_},
+  {"/restful/keyring/", restful_keyring_},
   {"/rhizome/status", rhizome_status_page},
   {"/rhizome/file/", rhizome_file_page},
   {"/rhizome/import", rhizome_direct_import},
