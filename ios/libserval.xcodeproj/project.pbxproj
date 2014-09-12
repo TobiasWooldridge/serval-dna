@@ -39,7 +39,6 @@
 		1A6416B018FADF2E00A769B2 /* msp_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165718FADF2E00A769B2 /* msp_client.c */; };
 		1A6416B118FADF2E00A769B2 /* msp_proxy.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165818FADF2E00A769B2 /* msp_proxy.c */; };
 		1A6416B218FADF2E00A769B2 /* net.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165918FADF2E00A769B2 /* net.c */; };
-		1A6416B318FADF2E00A769B2 /* nonce.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165A18FADF2E00A769B2 /* nonce.c */; };
 		1A6416B418FADF2E00A769B2 /* os.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165B18FADF2E00A769B2 /* os.c */; };
 		1A6416B518FADF2E00A769B2 /* overlay_address.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165C18FADF2E00A769B2 /* overlay_address.c */; };
 		1A6416B618FADF2E00A769B2 /* overlay_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A64165D18FADF2E00A769B2 /* overlay_buffer.c */; };
@@ -163,6 +162,8 @@
 		1A64185618FB1CC400A769B2 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A218FADF6800A769B2 /* sc_muladd.c */; };
 		1A64185718FB1CC400A769B2 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A318FADF6800A769B2 /* sc_reduce.c */; };
 		1A64185818FB1CC400A769B2 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A6417A418FADF6800A769B2 /* sign.c */; };
+		F60C847919C1877400934882 /* keyring_restful.c in Sources */ = {isa = PBXBuildFile; fileRef = F60C847719C1877400934882 /* keyring_restful.c */; };
+		F60C847A19C1877400934882 /* mesh_restful.c in Sources */ = {isa = PBXBuildFile; fileRef = F60C847819C1877400934882 /* mesh_restful.c */; };
 		F6CBF687199B092C0038905F /* whence.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF685199B092C0038905F /* whence.c */; };
 		F6CBF68A199B09320038905F /* console.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF688199B09320038905F /* console.c */; };
 		F6CBF68D199B09560038905F /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = F6CBF68B199B09560038905F /* limit.c */; };
@@ -255,7 +256,6 @@
 		1A64165718FADF2E00A769B2 /* msp_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = msp_client.c; path = ../../msp_client.c; sourceTree = "<group>"; };
 		1A64165818FADF2E00A769B2 /* msp_proxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = msp_proxy.c; path = ../../msp_proxy.c; sourceTree = "<group>"; };
 		1A64165918FADF2E00A769B2 /* net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = net.c; path = ../../net.c; sourceTree = "<group>"; };
-		1A64165A18FADF2E00A769B2 /* nonce.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nonce.c; path = ../../nonce.c; sourceTree = "<group>"; };
 		1A64165B18FADF2E00A769B2 /* os.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = os.c; path = ../../os.c; sourceTree = "<group>"; };
 		1A64165C18FADF2E00A769B2 /* overlay_address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = overlay_address.c; path = ../../overlay_address.c; sourceTree = "<group>"; };
 		1A64165D18FADF2E00A769B2 /* overlay_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = overlay_buffer.c; path = ../../overlay_buffer.c; sourceTree = "<group>"; };
@@ -511,6 +511,8 @@
 		1A64182418FB17C900A769B2 /* init_rs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = init_rs.h; sourceTree = "<group>"; };
 		1A64182518FB17C900A769B2 /* init_rs_char.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init_rs_char.c; sourceTree = "<group>"; };
 		1A64182818FB17C900A769B2 /* rs-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rs-common.h"; sourceTree = "<group>"; };
+		F60C847719C1877400934882 /* keyring_restful.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = keyring_restful.c; path = ../../keyring_restful.c; sourceTree = "<group>"; };
+		F60C847819C1877400934882 /* mesh_restful.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mesh_restful.c; path = ../../mesh_restful.c; sourceTree = "<group>"; };
 		F669924119A37576009C38DD /* serval-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "serval-Prefix.pch"; sourceTree = "<group>"; };
 		F669924219A375F7009C38DD /* rhizome_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rhizome_types.h; sourceTree = "<group>"; };
 		F6CBF685199B092C0038905F /* whence.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = whence.c; path = ../../whence.c; sourceTree = "<group>"; };
@@ -1100,6 +1102,8 @@
 		1A64181918FB15D900A769B2 /* daemon */ = {
 			isa = PBXGroup;
 			children = (
+				F60C847719C1877400934882 /* keyring_restful.c */,
+				F60C847819C1877400934882 /* mesh_restful.c */,
 				F6CBF690199B0E620038905F /* main.c */,
 				1A64163418FADF2E00A769B2 /* cli.c */,
 				1A64163518FADF2E00A769B2 /* commandline.c */,
@@ -1123,7 +1127,6 @@
 				1A64165418FADF2E00A769B2 /* monitor-cli.c */,
 				1A64165518FADF2E00A769B2 /* monitor-client.c */,
 				1A64165618FADF2E00A769B2 /* monitor.c */,
-				1A64165A18FADF2E00A769B2 /* nonce.c */,
 				1A64165C18FADF2E00A769B2 /* overlay_address.c */,
 				1A64165D18FADF2E00A769B2 /* overlay_buffer.c */,
 				1A64165E18FADF2E00A769B2 /* overlay_interface.c */,
@@ -1303,7 +1306,6 @@
 				1A64169718FADF2E00A769B2 /* directory_client.c in Sources */,
 				1A64183E18FB1CC400A769B2 /* fe_sub.c in Sources */,
 				1A6416A318FADF2E00A769B2 /* log_util.c in Sources */,
-				1A6416B318FADF2E00A769B2 /* nonce.c in Sources */,
 				1A6416C418FADF2E00A769B2 /* rhizome_bundle.c in Sources */,
 				1A6416DC18FADF2E00A769B2 /* strlcpy.c in Sources */,
 				1A6416CB18FADF2E00A769B2 /* rhizome_packetformats.c in Sources */,
@@ -1375,6 +1377,7 @@
 				1A6416AA18FADF2E00A769B2 /* mem.c in Sources */,
 				1A6417D018FADF6800A769B2 /* before.c in Sources */,
 				1A6416AD18FADF2E00A769B2 /* monitor-cli.c in Sources */,
+				F60C847919C1877400934882 /* keyring_restful.c in Sources */,
 				1A6416B218FADF2E00A769B2 /* net.c in Sources */,
 				1A6416A918FADF2E00A769B2 /* mdp_net.c in Sources */,
 				1A64184C18FB1CC400A769B2 /* ge_p3_to_cached.c in Sources */,
@@ -1404,6 +1407,7 @@
 				1A64184318FB1CC400A769B2 /* ge_frombytes.c in Sources */,
 				1A6417DF18FADF6800A769B2 /* box.c in Sources */,
 				1A64184D18FB1CC400A769B2 /* ge_p3_to_p2.c in Sources */,
+				F60C847A19C1877400934882 /* mesh_restful.c in Sources */,
 				1A6416A218FADF2E00A769B2 /* keyring.c in Sources */,
 				1A64183218FB1CC400A769B2 /* fe_add.c in Sources */,
 				1A64169D18FADF2E00A769B2 /* golay.c in Sources */,
